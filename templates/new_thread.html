@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>Create New Thread</h3>
+<form method="POST">
+  {{ form.hidden_tag() }}
+  <div class="mb-3">
+    {{ form.title.label }} {{ form.title(class_='form-control') }}
+  </div>
+  <div class="mb-3">
+    {{ form.content.label }} {{ form.content(class_='form-control', rows=5) }}
+  </div>
+  {{ form.submit(class_='btn btn-success') }}
+</form>
+{% endblock %}

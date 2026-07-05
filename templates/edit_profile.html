@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>Edit Profile</h3>
+<form method="POST" enctype="multipart/form-data">
+  {{ form.hidden_tag() }}
+  <div class="mb-3">
+    {{ form.bio.label }}<br>
+    {{ form.bio(class_='form-control', rows=3) }}
+  </div>
+  <div class="mb-3">
+    {{ form.avatar.label }}<br>
+    {{ form.avatar(class_='form-control') }}
+  </div>
+  {{ form.submit(class_='btn btn-primary') }}
+</form>
+{% endblock %}
